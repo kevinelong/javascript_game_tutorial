@@ -43,3 +43,14 @@ Sprite.prototype.moveUp = function () {
 Sprite.prototype.moveDown = function () {
     this.setY(this.y += this.box.height)
 };
+Sprite.prototype.moveRandom = function () {
+    this.x = Math.floor(Math.random() * this.world.width);
+    this.y = Math.floor(Math.random() * this.world.height);
+    this.updatePosition();
+};
+Sprite.prototype.moveCenter = function () {
+    this.x = Math.floor(this.world.width/2);
+    this.y = Math.floor(this.world.height/2);
+    this.updatePosition();
+};
+

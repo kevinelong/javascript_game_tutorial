@@ -12,17 +12,23 @@
 <script src="js/game05/heavy_ship.js"></script>
 <script>
 
+
     document.addEventListener("DOMContentLoaded", function () {
+
         var gameArea = document.getElementById("gameArea");
         var arena = new Space(gameArea);
-        for(var i=0;i<6;i++){
+
+        for (var i = 0; i < 6; i++) {
             var enemy = new EnemyShip("!");
-            enemy.mx = Math.random()*4-2;
-            enemy.my = Math.random()*4-2;
+            enemy.mx = Math.random() * 4 - 2;
+            enemy.my = Math.random() * 4 - 2;
             arena.addSprite(enemy);
         }
-        arena.addSprite(new HeavyShip("@"));
+
+        var player = new HeavyShip("@");
+        arena.addPlayer(player);
         arena.gameLoop();
+
     });
 
 </script>

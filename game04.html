@@ -13,10 +13,10 @@
     document.addEventListener("DOMContentLoaded", function () {
         var gameArea = document.getElementById("gameArea");
         var arena = new HyperArena(gameArea);
-        for(var i=0;i<6;i++){
+        for (var i = 0; i < 6; i++) {
             arena.addSprite(new Ship("!"));
         }
-        arena.addSprite(new Ship("@"));
+        arena.addPlayer(new Ship("@"));
         arena.gameLoop();
     });
 </script>

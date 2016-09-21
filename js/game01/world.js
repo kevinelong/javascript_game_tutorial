@@ -32,8 +32,4 @@ World.prototype.addElement = function (sprite) {
     sprite.init(sprite.world.element);
     this.element.appendChild(sprite.element);
 };
-World.prototype.moveRandom = function (sprite) {
-    sprite.x = Math.floor(Math.random() * this.width);
-    sprite.y = Math.floor(Math.random() * this.height);
-    sprite.updatePosition();
-};
+
